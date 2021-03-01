@@ -1,5 +1,5 @@
 // server.js
-// where your node app starts
+"use strict";
 
 // init project
 const express = require("express");
