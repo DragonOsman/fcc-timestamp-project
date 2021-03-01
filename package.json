@@ -6,10 +6,6 @@
 	"scripts": {
 		"start": "node server.js"
 	},
-	"dependencies": {
-		"express": "^4.12.4",
-		"cors": "^2.8.0"
-	},
 	"repository": {
 		"type": "git",
 		"url": "https://githost.com/camper/repo.git"
@@ -20,5 +16,9 @@
 		"express",
 		"freecodecamp"
 	],
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1"
+	}
 }
