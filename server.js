@@ -51,11 +51,17 @@ app.get("/api/timestamp/:date", (req, res) => {
   const dateQuery = req.params.date;
   // check if string is a timestamp
   if (/\d{5,}/.test(dateQuery)) {
-    res.json({ unix: parseInt(dateQuery), utc: new Date(parseInt(dateQuery)).toUTCString() });
+    res.json({
+      unix: parseInt(dateQuery),
+      utc: new Date(parseInt(dateQuery)).toUTCString()
+    });
   } else {
     if (new Date(dateQuery).toString() !== "Invalid Date") {
       const dateStr = new Date(dateQuery);
-      res.json({ unix: dateStr.valueOf(), utc: dateStr.toUTCString() });
+      res.json({
+        unix: dateStr.valueOf(),
+        utc: dateStr.toUTCString()
+      });
     } else {
       res.json({ error: "Invalid Date" });
     }
